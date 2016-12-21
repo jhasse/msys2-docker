@@ -14,4 +14,5 @@ COPY msys64 /usr/bin/
 COPY mingw32 /usr/bin/
 COPY mingw64 /usr/bin/
 
-COPY wineprefix /root/.wine
+ENV MSYS_ARCH 32
+RUN msys2-init
